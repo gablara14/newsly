@@ -1,14 +1,13 @@
 import React from "react";
 import AdminContainer from "../../../components/admin/AdminContainer";
 import styles from "../../../styles/Admin.module.css";
+import EditButton from "../../../components/admin/EditButton";
 const leads: React.FC = () => {
   return (
     <AdminContainer title="Lista de emails">
       <div className={styles.buttonContainer}>
-        <button className={styles.removeLeadButton}>
-          Remover leads Selecionados
-        </button>
-        <button className={styles.addLeadButton}>Adicionar lead</button>
+        <EditButton text="Remover Leads selecionados" color="red" />
+        <EditButton text="Adicionar Lead" />
       </div>
       <div className={styles.tableContainer}>
         <table>

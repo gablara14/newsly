@@ -21,7 +21,7 @@
 .adminBody {
   margin-top: 105px;
   max-width: 1000px;
-  width: 100%;
+  width: 95%;
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -102,8 +102,10 @@ FIELD
   align-items: center;
   justify-content: center;
 }
-.tableCheckBox input {
-  transform: scale(1.1);
+.tableCheckBox input,
+.confirmPostLeadsCheckbox input {
+  cursor: pointer;
+  transform: scale(1.2);
 }
 
 /* 
@@ -124,6 +126,7 @@ BUTTONS
   color: white;
   border-radius: 5px;
   margin-left: 20px;
+  min-width: 100px;
 }
 .removeLeadButton {
   background-color: rgba(255, 52, 52, 0.78);
@@ -131,4 +134,40 @@ BUTTONS
 
 .addLeadButton {
   background-color: #6c63ff;
+}
+
+.settingsButtonContainer {
+  width: 100%;
+  display: flex;
+  margin-top: 40px;
+  justify-content: flex-end;
+}
+
+.confirmPostBottomContainer {
+  display: flex;
+  flex-wrap: wrap;
+
+  justify-content: space-between;
+}
+
+.confirmPostImage {
+  width: 217px;
+  height: 156px;
+  background-color: rgba(0, 0, 0, 0.3);
+  border-radius: 2px;
+}
+.confirmPostButtonContainer {
+  width: 100%;
+  margin-top: 40px;
+  display: flex;
+  justify-content: flex-end;
+}
+
+.confirmPostLeadsCheckbox {
+  margin-top: 10px;
+}
+
+.confirmPostLeadsCheckbox label {
+  font-size: 18px;
+  margin-left: 5px;
 }

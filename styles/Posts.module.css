@@ -1,10 +1,16 @@
 .postContainer {
 }
+
+.post * {
+  cursor: pointer;
+}
+
 .postContainerTitle {
   margin-bottom: 20px;
   padding-top: 40px;
   border-bottom: 1px solid rgba(0, 0, 0, 0.3);
 }
+
 .postContainerTitle h2 {
   font-weight: 600;
   font-size: 26px;
@@ -13,8 +19,13 @@
   display: flex;
   align-items: center;
   height: 156px;
+  margin: auto;
   margin-bottom: 20px;
-  justify-content: center;
+  max-width: 800px;
+  width: 90%;
+}
+.postResponsiveTitle {
+  display: none;
 }
 
 .postImage {
@@ -31,7 +42,8 @@
   height: 100%;
   width: 80%;
 }
-.postTitle {
+.postTitle,
+.postResponsiveTitle {
   font-size: 22px;
   font-weight: 600;
 }
@@ -52,4 +64,54 @@
 .postDate {
   font-weight: "bold";
   color: rgba(0, 0, 0, 0.5);
+}
+
+@media screen and (max-width: 1050px) {
+  .postImage {
+    width: 150px;
+    height: 150px;
+  }
+
+  .postTitle {
+    font-size: 18px;
+  }
+  .postSubtitle {
+    font-size: 18px;
+  }
+
+  .postFooter {
+    font-size: 16px;
+  }
+}
+@media screen and (max-width: 850px) {
+  .postImage {
+    width: 120px;
+    height: 120px;
+  }
+  .postTitle {
+    font-size: 16px;
+  }
+  .postSubtitle {
+    font-size: 16px;
+  }
+  .postFooter {
+    font-size: 14px;
+  }
+}
+
+@media screen and (max-width: 600px) {
+  .postSubtitle {
+    display: none;
+  }
+  .postImage {
+    width: 80px;
+    height: 80px;
+  }
+  .postResponsiveTitle {
+    display: block;
+    font-size: 16px;
+  }
+  .postTitle {
+    display: none;
+  }
 }
