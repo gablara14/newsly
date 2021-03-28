@@ -1,0 +1,134 @@
+.adminHeader ul {
+  display: flex;
+  list-style-type: none;
+}
+.adminHeaderContainer {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  max-width: 1000px;
+  width: 100%;
+}
+
+.adminHeaderContainer li {
+  margin-left: 30px;
+  cursor: pointer;
+  font-size: 16px;
+  font-weight: 600;
+  color: #434a53;
+}
+
+.adminBody {
+  margin-top: 105px;
+  max-width: 1000px;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+.adminContainer {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+.adminTitle {
+  font-size: 32px;
+  font-weight: 600;
+}
+
+/* 
+FIELD
+*/
+
+.fieldContainer {
+  display: flex;
+  flex-direction: column;
+  /* width: 273px; */
+  margin: auto;
+  align-items: center;
+  justify-content: center;
+  margin-top: 20px;
+  width: 100%;
+}
+.fieldContainer label,
+.fieldContainer input {
+  width: 100%;
+  font-size: 18px;
+}
+
+.fieldContainer label {
+  font-weight: bold;
+  margin-bottom: 7px !important;
+}
+
+.fieldContainer input {
+  height: 51px;
+  border: 1px solid rgba(0, 0, 0, 0.3);
+  border-radius: 5px;
+  font-weight: 600;
+  padding-left: 10px;
+}
+.form {
+  max-width: 693px;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  margin: auto;
+}
+
+/* 
+  Lead List
+*/
+
+.tableContainer {
+  margin-top: 20px;
+}
+.tableContainer table {
+  border-spacing: 0;
+  width: 100%;
+}
+.tableContainer th,
+.tableContainer td {
+  text-align: start;
+  height: 50px;
+  padding: 0px 10px;
+  border: 1px solid rgba(0, 0, 0, 0.1);
+}
+.tableCheckBox {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.tableCheckBox input {
+  transform: scale(1.1);
+}
+
+/* 
+BUTTONS
+*/
+
+.buttonContainer {
+  margin-top: 40px;
+  display: flex;
+  justify-content: flex-end;
+}
+
+.addLeadButton,
+.removeLeadButton {
+  height: 40px;
+  font-size: 14px;
+  padding: 0px 20px;
+  color: white;
+  border-radius: 5px;
+  margin-left: 20px;
+}
+.removeLeadButton {
+  background-color: rgba(255, 52, 52, 0.78);
+}
+
+.addLeadButton {
+  background-color: #6c63ff;
+}

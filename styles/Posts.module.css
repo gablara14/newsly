@@ -1,0 +1,55 @@
+.postContainer {
+}
+.postContainerTitle {
+  margin-bottom: 20px;
+  padding-top: 40px;
+  border-bottom: 1px solid rgba(0, 0, 0, 0.3);
+}
+.postContainerTitle h2 {
+  font-weight: 600;
+  font-size: 26px;
+}
+.post {
+  display: flex;
+  align-items: center;
+  height: 156px;
+  margin-bottom: 20px;
+  justify-content: center;
+}
+
+.postImage {
+  background-color: #c4c4c4;
+  width: 217px;
+  height: 100%;
+  border-radius: 4px;
+}
+.postBody {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  margin-left: 20px;
+  height: 100%;
+  width: 80%;
+}
+.postTitle {
+  font-size: 22px;
+  font-weight: 600;
+}
+.postSubtitle {
+  font-size: 22px;
+  font-weight: 400;
+  color: rgba(0, 0, 0, 0.5);
+}
+
+.postFooter {
+  font-size: 18px;
+}
+
+.postAuthor {
+  font-weight: 700;
+}
+
+.postDate {
+  font-weight: "bold";
+  color: rgba(0, 0, 0, 0.5);
+}

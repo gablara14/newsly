@@ -1,0 +1,87 @@
+.button {
+  background-color: #6c63ff;
+  color: white;
+  width: 222px;
+  height: 46px;
+  border-radius: 10px;
+  font-weight: bold;
+  font-size: 20px;
+}
+
+.smallCard {
+  width: 221px;
+  height: 221px;
+  margin-left: 1rem;
+  cursor: pointer;
+  border-radius: 20px;
+  background-color: white;
+  margin-top: 1rem;
+  box-shadow: 0px 10px 30px 0px rgba(0, 0, 0, 0.25);
+}
+
+.smallCardText {
+  color: rgba(0, 0, 0, 0.5);
+  font-size: 16px;
+  margin-top: 0px;
+}
+
+.logoText {
+  font-weight: bold;
+  color: #6c63ff;
+  font-size: 32px;
+}
+
+.headerContainer {
+  display: flex;
+  align-items: center;
+  margin: auto;
+  width: 100%;
+  max-width: 1100px;
+  justify-content: space-between;
+  padding: 0px 20px;
+}
+
+.stepImageContainer {
+  align-items: center;
+  display: flex;
+  width: 100%;
+  padding-top: 2rem;
+  height: 40%;
+  justify-content: center;
+}
+
+.stepBodyContainer {
+  display: flex;
+  padding: 10px;
+  flex-direction: column;
+}
+
+.authorCard {
+  width: 221px;
+  height: 320px;
+  margin: 10px;
+}
+
+.authorImage {
+  width: 221px;
+  height: 221px;
+  border-radius: 50%;
+  cursor: pointer;
+  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+}
+
+.footerContainer {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin: auto;
+  width: 100%;
+  max-width: 1100px;
+  justify-content: space-between;
+}
+
+@media screen and (max-width: 600px) {
+  .headerCreateAccountButton {
+    display: none;
+  }
+}
