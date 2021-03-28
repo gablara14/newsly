@@ -7,7 +7,7 @@
   align-items: center;
   justify-content: space-between;
   max-width: 1000px;
-  width: 100%;
+  width: 95%;
 }
 
 .adminHeaderContainer li {
@@ -16,6 +16,34 @@
   font-size: 16px;
   font-weight: 600;
   color: #434a53;
+}
+
+/*  MOBILE MENU */
+.mobileMenu {
+  background-color: white;
+  display: none;
+  width: 280px;
+  border-right: 1px solid rgba(0, 0, 0, 0.1);
+  position: fixed;
+  top: 0;
+  z-index: 100;
+  left: 0;
+  height: 100vh;
+}
+.mobileMenu li {
+  width: 100%;
+  display: flex;
+}
+.mobileMenu a {
+  width: 100%;
+  height: 100%;
+  padding: 20px;
+  border-bottom: 1px solid rgba(0, 0, 0, 0.1);
+}
+.mobileMenu ul {
+  display: flex;
+  width: 240px;
+  flex-direction: column;
 }
 
 .adminBody {
@@ -85,7 +113,11 @@ FIELD
 
 .tableContainer {
   margin-top: 20px;
+  display: block;
+  overflow-x: auto;
+  white-space: nowrap;
 }
+
 .tableContainer table {
   border-spacing: 0;
   width: 100%;
@@ -100,12 +132,12 @@ FIELD
 .tableCheckBox {
   display: flex;
   align-items: center;
+
   justify-content: center;
 }
 .tableCheckBox input,
 .confirmPostLeadsCheckbox input {
   cursor: pointer;
-  transform: scale(1.2);
 }
 
 /* 
@@ -115,6 +147,7 @@ BUTTONS
 .buttonContainer {
   margin-top: 40px;
   display: flex;
+  flex-wrap: wrap;
   justify-content: flex-end;
 }
 
@@ -125,8 +158,9 @@ BUTTONS
   padding: 0px 20px;
   color: white;
   border-radius: 5px;
-  margin-left: 20px;
+  margin-left: 10px;
   min-width: 100px;
+  margin-bottom: 10px;
 }
 .removeLeadButton {
   background-color: rgba(255, 52, 52, 0.78);
@@ -170,4 +204,19 @@ BUTTONS
 .confirmPostLeadsCheckbox label {
   font-size: 18px;
   margin-left: 5px;
+}
+.menuIcon {
+  display: none;
+}
+
+@media screen and (max-width: 800px) {
+  .adminHeaderMenu {
+    display: none;
+  }
+  .menuIcon {
+    display: block;
+  }
+  .mobileMenu {
+    display: flex;
+  }
 }

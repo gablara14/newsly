@@ -84,6 +84,9 @@
   }
 }
 @media screen and (max-width: 850px) {
+  .post {
+    height: 120px;
+  }
   .postImage {
     width: 120px;
     height: 120px;
@@ -100,6 +103,12 @@
 }
 
 @media screen and (max-width: 600px) {
+  .post {
+    height: 80px;
+  }
+  .postFooter {
+    font-size: 12px;
+  }
   .postSubtitle {
     display: none;
   }
@@ -109,7 +118,7 @@
   }
   .postResponsiveTitle {
     display: block;
-    font-size: 16px;
+    font-size: 14px;
   }
   .postTitle {
     display: none;

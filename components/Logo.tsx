@@ -2,7 +2,11 @@ import React from "react";
 import styles from "../styles/Components.module.css";
 import Link from "next/link";
 
-const Logo: React.FC = () => {
+interface LogoProps {
+  text?: string;
+}
+
+const Logo: React.FC<LogoProps> = ({ text }) => {
   return (
     <div
       style={{
@@ -14,7 +18,7 @@ const Logo: React.FC = () => {
       }}
     >
       <Link href="/">
-        <span className={styles.logoText}>Newsly</span>
+        <span className={styles.logoText}>{text ? text : "Newsly"}</span>
       </Link>
     </div>
   );

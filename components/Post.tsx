@@ -23,7 +23,7 @@ const Post: React.FC<PostProps> = ({
     subTitle.length < 100 ? subTitle : subTitle.slice(0, 100) + "...";
 
   const renderedResponsiveTitle =
-    title.length < 60 ? title : title.slice(0, 60) + "...";
+    title.length < 40 ? title : title.slice(0, 40) + "...";
 
   return (
     <Link href="/admin/posts/2">
