@@ -7,6 +7,8 @@ import SmallCard from "../components/SmallCard";
 import Header from "../components/Header";
 import Footer from "../components/Footer";
 import AuthorCard from "../components/AuthorCard";
+import { connectToDatabase } from "../utils/mongodb";
+import { GetServerSideProps } from "next";
 
 const Home: React.FC = () => {
   return (
@@ -103,3 +105,15 @@ const Home: React.FC = () => {
 };
 
 export default Home;
+
+// export const getServerSideProps: GetServerSideProps = async (context) => {
+//   const { db } = await connectToDatabase();
+//   const data = await db.collection("users").find({}).toArray();
+
+//   const users = JSON.parse(JSON.stringify(data));
+
+//   console.log(users);
+//   return {
+//     props: { users: users },
+//   };
+// };

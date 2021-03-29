@@ -7,7 +7,7 @@ const leads: React.FC = () => {
     <AdminContainer title="Lista de emails">
       <div className={styles.buttonContainer}>
         <EditButton text="Remover Leads selecionados" color="red" />
-        <EditButton text="Adicionar Lead" />
+        <EditButton text="Adicionar Lead" to="/admin/leads/create" />
       </div>
       <div className={styles.tableContainer}>
         <table>

@@ -9,13 +9,7 @@ interface PostViewProps {
 const PostView: React.FC<PostViewProps> = ({ adminView }) => {
   return (
     <div className={styles.postContainer}>
-      {adminView ? (
-        <Link href="/admin/posts">
-          <a>
-            <img src="/back.png" alt="back" />
-          </a>
-        </Link>
-      ) : (
+      {adminView ? null : (
         <div className={styles.userInfoContainer}>
           <div className={styles.userInfoWrap}>
             {/* IMG */}

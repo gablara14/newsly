@@ -1,3 +1,5 @@
+@import url("https://fonts.googleapis.com/css2?family=Spectral:ital,wght@0,300;0,400;0,700;1,300&family=Tinos:ital,wght@0,400;0,700;1,400;1,700&display=swap");
+
 .postContainer {
   max-width: 750px;
   width: 95%;
@@ -84,5 +86,8 @@
   background-color: rgba(0, 0, 0, 0.3);
 }
 
-.postBodyContainer {
+.postBodyContainer * {
+  font-family: "Tinos", serif;
+  font-size: 22px;
+  line-height: 36px;
 }

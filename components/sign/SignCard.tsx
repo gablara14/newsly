@@ -7,6 +7,8 @@ interface SignCardProps {
   buttonText: "Entrar" | "Continuar" | "Recuperar senha";
   smallText: string;
   smallTextLink: string;
+  onSubmit?: any;
+  loading?: boolean;
 }
 
 const SignCard: React.FC<SignCardProps> = ({
@@ -15,6 +17,8 @@ const SignCard: React.FC<SignCardProps> = ({
   buttonText,
   smallText,
   smallTextLink,
+  onSubmit,
+  loading,
 }) => {
   return (
     <div className={styles.signCardWrap}>
@@ -36,7 +40,7 @@ const SignCard: React.FC<SignCardProps> = ({
           ) : null}
         </div>
         <div className={styles.signCardFooter}>
-          <SignButton text={buttonText} />
+          <SignButton loading={loading} onClick={onSubmit} text={buttonText} />
           <p className={styles.smallText}>
             {smallText.split("?")[0]}?
             <Link href={smallTextLink}>
