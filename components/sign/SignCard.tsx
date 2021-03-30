@@ -26,7 +26,7 @@ const SignCard: React.FC<SignCardProps> = ({
         <h1 className={styles.signTitle}>{title}</h1>
       </div>
 
-      <div className={styles.signCard}>
+      <form className={styles.signCard}>
         <div className={styles.signCardBody}>
           {children}
           {title === "Fazer Login" ? (
@@ -48,7 +48,7 @@ const SignCard: React.FC<SignCardProps> = ({
             </Link>
           </p>
         </div>
-      </div>
+      </form>
     </div>
   );
 };

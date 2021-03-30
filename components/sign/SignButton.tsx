@@ -19,7 +19,7 @@ const SignButton: React.FC<ButtonProps> = ({ text, to, onClick, loading }) => {
       );
     }
     return (
-      <button onClick={onClick} className={styles.button}>
+      <button onClick={onClick} type="submit" className={styles.button}>
         {loading ? <Loader /> : text}
       </button>
     );
