@@ -1,6 +1,8 @@
 import { connectToDatabase } from "../utils/mongodb";
 import bcrypt from "bcryptjs";
 import type { NextApiRequest, NextApiResponse } from "next";
+import jwt from "jsonwebtoken";
+import { jwtSecretKey } from "../config/keys";
 
 class UserController {
   static async signUp(req: NextApiRequest, res: NextApiResponse) {
@@ -11,18 +13,24 @@ class UserController {
       const { email, password, username } = req.body;
       const salt = bcrypt.genSaltSync(10);
       const hash = bcrypt.hashSync(password, salt);
+      const createdAt = new Date();
       await User.insertOne(
         {
           username,
+          createdAt,
         },
         async (err, user) => {
           await Login.insertOne({
             email,
             password: hash,
             userId: user.insertedId,
+            createdAt,
           });
+          const token = jwt.sign({ userId: user.insertedId }, jwtSecretKey);
+          return res.status(200).send({ token });
         }
       );
+
       return res.status(200).json({});
     } catch (err) {
       console.log(err);

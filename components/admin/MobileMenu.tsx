@@ -30,6 +30,9 @@ const MobileMenu: React.FC = () => {
           <Link href="/admin/create">
             <a>Criar</a>
           </Link>
+          <Link href="/admin">
+            <a>Logout</a>
+          </Link>
         </li>
       </ul>
     </div>

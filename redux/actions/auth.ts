@@ -40,6 +40,7 @@ export const signUpUser = (data: any, history: any) => async (
     const res = await axios.post("/api/users", data);
     if (res.data === "BLABLABALBAL") {
     }
+    console.log(res.data);
     history.push("/admin");
     dispatch<SignUpAction>({ type: ActionTypes.signUpUser, payload: res.data });
   } catch (err) {

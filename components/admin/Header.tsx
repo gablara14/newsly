@@ -40,6 +40,11 @@ const Header: React.FC = () => {
                 <a>Criar</a>
               </Link>
             </li>
+            <li>
+              <Link href="/">
+                <a>Logout</a>
+              </Link>
+            </li>
           </ul>
         </div>
       </div>
