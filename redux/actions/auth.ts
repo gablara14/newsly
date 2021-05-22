@@ -1,6 +1,7 @@
 import axios from "axios";
 import { Dispatch } from "redux";
 import { ActionTypes } from "./types";
+import authSession from '../../utils/authSession'
 
 export interface Login {
   email: string;
@@ -60,6 +61,7 @@ export const signInUser = (data: any, history: any) => async (
     const res = await axios.post("/api/users", data);
     if (res.data === "BLABLABALBAL") {
     }
+    authSession.sess.set("")
     history.push("/admin");
     dispatch<SignInAction>({ type: ActionTypes.signInUser, payload: res.data });
   } catch (err) {
